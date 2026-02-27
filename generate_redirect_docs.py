@@ -95,7 +95,7 @@ for page in _PAGES:
 
     index = dir_ / "index.html"
     with index.open("w") as io:
-        real_dest = f"https://ormar-orm.github.io/ormar/{page}"
+        real_dest = f"https://ormar-orm.github.io/ormar/latest/{page}"
         io.write(_TEMPLATE.substitute(real_dest=real_dest))
 
     print(f"[+] wrote {index}", file=sys.stderr)
