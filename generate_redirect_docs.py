@@ -86,7 +86,7 @@ _PAGES = [
     "api/",
 ]
 
-_OUT = Path(__file__).parent / "ormar"
+_OUT = Path(__file__).parent / "ormar"/ "latest"
 assert _OUT.is_dir(), f"Output directory {_OUT} does not exist"
 
 for page in _PAGES:
