@@ -86,7 +86,7 @@ _PAGES = [
     "api/",
 ]
 
-_OUT = Path(__file__).parent / "ormar"/ "latest"
+_OUT = Path(__file__).parent / "ormar"
 assert _OUT.is_dir(), f"Output directory {_OUT} does not exist"
 
 for page in _PAGES:
@@ -95,7 +95,7 @@ for page in _PAGES:
 
     index = dir_ / "index.html"
     with index.open("w") as io:
-        real_dest = f"https://ormar-orm.github.io/{page}"
+        real_dest = f"https://ormar-orm.github.io/ormar/{page}"
         io.write(_TEMPLATE.substitute(real_dest=real_dest))
 
     print(f"[+] wrote {index}", file=sys.stderr)
